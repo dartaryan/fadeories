@@ -12,8 +12,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import moment from "moment";
 import { useDispatch } from "react-redux";
-import useStyles from './styles';
-
+import useStyles from "./styles";
 
 const Post = ({ post }) => {
   const classes = useStyles();
@@ -47,14 +46,11 @@ const Post = ({ post }) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
-        <Button className={classes.buttons} size="small" color="primary" onClick={() => {}}>
-          <ThumbUpAltIcon fontSize="small" />
-          Revive·
-          {post.likeCount}
+        <Button className={classes.buttons} size="medium" onClick={() => {}}>
+           <ThumbUpAltIcon fontSize="medium" /> · Revive · [{post.likeCount  }] 
         </Button>
-        <Button className={classes.buttons} size="small" color="primary" onClick={() => {}}>
-          <DeleteIcon fontSize="small" />
-          Scatter·
+        <Button className={classes.buttons} size="medium" onClick={() => {}}>
+          <DeleteIcon fontSize="medium" />· Scatter ·
         </Button>
       </CardActions>
     </Card>
