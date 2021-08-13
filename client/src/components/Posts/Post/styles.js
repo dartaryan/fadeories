@@ -20,18 +20,19 @@ export default makeStyles({
     borderRadius: "15px",
     height: "100%",
     position: "relative",
+    backgroundColor: "#ffe8e2",
   },
   overlay: {
     position: "absolute",
     top: "20px",
     left: "20px",
-    color: "white",
+    color: "#ffe8e2",
   },
   overlay2: {
     position: "absolute",
     top: "20px",
     right: "20px",
-    color: "white",
+    color: "#ffe8e2",
   },
   grid: {
     display: "flex",
@@ -43,10 +44,17 @@ export default makeStyles({
   },
   title: {
     padding: "0 16px",
+    color: "#162b29",
+    
   },
   cardActions: {
     padding: "0 16px 8px 16px",
     display: "flex",
     justifyContent: "space-between",
+  },
+  buttons: {
+    color: "#162b29",
+    fontWeight: "bold",
+    fontFamily: "Heebo"
   },
 });

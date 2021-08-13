@@ -33,7 +33,6 @@ const Form = () => {
       >
         <Typography className={classes.heading}> Creating a Fadeory</Typography>
         <TextField
-          
           name="creator"
           variant="outlined"
           label="Creator"
