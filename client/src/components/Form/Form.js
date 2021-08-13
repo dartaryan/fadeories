@@ -31,8 +31,9 @@ const Form = () => {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6"> Creating a Fadeory</Typography>
+        <Typography className={classes.heading}> Creating a Fadeory</Typography>
         <TextField
+          
           name="creator"
           variant="outlined"
           label="Creator"
@@ -80,7 +81,6 @@ const Form = () => {
         <Button
           className={classes.buttonSubmit}
           variant="contained"
-          color="primary"
           size="large"
           type="submit"
           fullWidth
@@ -88,8 +88,8 @@ const Form = () => {
           Submit
         </Button>
         <Button
+          className={classes.buttonClear}
           variant="contained"
-          color="secondary"
           size="small"
           onClick={clear}
           fullWidth

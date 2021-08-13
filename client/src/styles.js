@@ -7,9 +7,12 @@ export default makeStyles(() => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor:"rgba(33,106,97,255)",
   },
   heading: {
-    color: "rgba(0,183,255, 1)",
+    color: "#F3eaea",
+    fontWeight: "bold",
+    fontFamily: "Heebo"
   },
   image: {
     marginLeft: "15px",
