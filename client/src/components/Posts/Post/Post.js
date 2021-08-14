@@ -13,12 +13,11 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import moment from "moment";
 import useStyles from "./styles";
 import { useDispatch } from "react-redux";
-import { deletePost } from "../../../actions/posts";
-
+import { deletePost, likePost } from "../../../actions/posts";
 
 const Post = ({ post, setCurrentId }) => {
   const classes = useStyles();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <Card className={classes.card}>
@@ -30,7 +29,7 @@ const Post = ({ post, setCurrentId }) => {
       <div className={classes.overlay}>
         <Typography variant="h6">{post.creator}</Typography>
         <Typography variant="body2">
-          {moment(post.createAt).fromNow()}
+          {moment(post.createdAt).fromNow()}
         </Typography>
       </div>
       <div className={classes.overlay2}>
@@ -47,16 +46,26 @@ const Post = ({ post, setCurrentId }) => {
         <Typography className={classes.title2}>{post.title}</Typography>
       </div>
       <CardContent>
-        <Typography className={classes.message}>{post.message}</Typography>
+        <Typography className={classes.message} component="p">
+          {post.message}
+        </Typography>
         <Typography className={classes.details}>
           {post.tags.map((tag) => `#${tag} `)}
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
-        <Button className={classes.buttons} size="medium" onClick={() => {}}>
+        <Button
+          className={classes.buttons}
+          size="medium"
+          onClick={() => dispatch(likePost(post._id))}
+        >
           <ThumbUpAltIcon fontSize="medium" /> · Revive · [{post.likeCount}]
         </Button>
-        <Button className={classes.buttons} size="medium" onClick={() => dispatch(deletePost(post._id))}>
+        <Button
+          className={classes.buttons}
+          size="medium"
+          onClick={() => dispatch(deletePost(post._id))}
+        >
           <DeleteIcon fontSize="medium" />· Scatter ·
         </Button>
       </CardActions>
