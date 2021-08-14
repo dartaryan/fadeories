@@ -24,3 +24,7 @@ body {
     background-position: 0% 50%;
   }
 }
+
+#upper{
+  display: inline-block;
+}

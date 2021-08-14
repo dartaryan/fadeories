@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     borderRadius: 15,
     margin: "30px 0",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "rgba(33,106,97,255)",

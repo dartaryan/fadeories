@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <div>
+        <div id="upper">
         <Typography className={classes.heading} variant="h2" align="center">
           Fadeories
         </Typography>
