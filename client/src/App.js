@@ -26,7 +26,7 @@ const App = () => {
         <img className={classes.image} src={fadeories} alt="icon" height="60" />
         </div>
         <div>
-          <label>hello </label>
+          <h3 className={classes.lower}>Don't let those memories fade away</h3>
         </div>
       </AppBar>
       <Grow in>

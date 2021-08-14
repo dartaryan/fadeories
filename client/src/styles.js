@@ -18,6 +18,7 @@ export default makeStyles((theme) => ({
     color: "#F3eaea",
     fontWeight: "bold",
     fontFamily: "Heebo",
+    margin: "0px"
   },
   image: {
     marginLeft: "15px",
