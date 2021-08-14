@@ -10,12 +10,12 @@ export default makeStyles((theme) => ({
     backgroundColor: "rgba(33,106,97,255)",
   },
   heading: {
-    color: "#F3eaea",
+    color: "#ddd8d8",
     fontWeight: "bold",
     fontFamily: "Heebo",
   },
   lower: {
-    color: "#F3eaea",
+    color: "#ddd8d8",
     fontWeight: "bold",
     fontFamily: "Heebo",
     margin: "0px"
@@ -28,10 +28,19 @@ export default makeStyles((theme) => ({
       flexDirection: "column-reverse",
     },
     heading: {
-      color: "#F3eaea",
+      color: "#ddd8d8",
       fontWeight: "bold",
       fontFamily: "Heebo",
       fontSize: "2rem",
     },
+    lower: {
+      color: "#ddd8d8",
+      fontWeight: "bold",
+      fontFamily: "Heebo",
+      margin: "0px",
+      fontSize: "1rem",
+    },
   },
 }));
+
+
