@@ -5,12 +5,16 @@ export default makeStyles((theme) => ({
     borderRadius: 15,
     margin: "30px 0",
     display: "flex",
-    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "rgba(33,106,97,255)",
   },
   heading: {
+    color: "#F3eaea",
+    fontWeight: "bold",
+    fontFamily: "Heebo",
+  },
+  lower: {
     color: "#F3eaea",
     fontWeight: "bold",
     fontFamily: "Heebo",
