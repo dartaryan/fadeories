@@ -1,12 +1,12 @@
 body {
   background: linear-gradient(
     -45deg,
-    #ff0000,
+    #000000,
     #182f2e,
-    #01ffff,
+    #2c5252,
     #111f1e,
     #162b29,
-    #ff0000
+    #6b6464
 
   );
   background-size: 400% 400%;
