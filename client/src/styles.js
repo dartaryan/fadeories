@@ -16,7 +16,6 @@ export default makeStyles((theme) => ({
   },
   lower: {
     color: "#ddd8d8",
-    fontWeight: "bold",
     fontFamily: "Heebo",
     margin: "0px"
   },
@@ -35,7 +34,6 @@ export default makeStyles((theme) => ({
     },
     lower: {
       color: "#ddd8d8",
-      fontWeight: "bold",
       fontFamily: "Heebo",
       margin: "0px",
       fontSize: "1rem",
