@@ -4,7 +4,7 @@ export default makeStyles({
   media: {
     height: 0,
     paddingTop: "56.25%",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
     backgroundBlendMode: "darken",
   },
   border: {
@@ -24,14 +24,14 @@ export default makeStyles({
   },
   overlay: {
     position: "absolute",
-    top: "20px",
+    top: "10px",
     left: "20px",
     color: "#ffe8e2",
   },
   overlay2: {
     position: "absolute",
-    top: "20px",
-    right: "20px",
+    top: "10px",
+    right: "10px",
     color: "#ffe8e2",
   },
   grid: {
@@ -41,6 +41,7 @@ export default makeStyles({
     display: "flex",
     justifyContent: "space-between",
     margin: "20px",
+    fontSize: "12px",
   },
   title: {
     padding: "0 16px",
@@ -56,5 +57,19 @@ export default makeStyles({
     color: "#162b29",
     fontWeight: "bold",
     fontFamily: "Heebo"
+  },
+
+  title2: {
+    textAlign: "center",
+    color: "#162b29",
+    fontFamily: "Heebo",
+    fontSize: "12px",
+  },
+  message: {
+    textAlign: "center",
+    color: "#162b29",
+    fontFamily: "Heebo",
+    fontSize: "24px",
+    fontWeight: "bold",
   },
 });
