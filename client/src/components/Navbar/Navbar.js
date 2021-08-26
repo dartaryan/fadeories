@@ -1,38 +1,67 @@
-import React from "react";
-import { AppBar, Avatar, Button, Toolbar, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  AppBar,
+  Avatar,
+  Button,
+  Toolbar,
+  Typography,
+  Grid,
+} from "@material-ui/core";
+import { Link, useHistory,useLocation } from "react-router-dom";
 
 import fadeories from "../../images/fadeories.gif";
 import useStyles from "./styles";
+import { useDispatch } from "react-redux";
 
 export const Navbar = () => {
   const classes = useStyles();
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const location = useLocation();
 
-  const user = null;
+  const logout = () => {
+    dispatch({ type: "LOGOUT" });
+
+    history.push("/");
+
+    setUser(null);
+  };
+
+  useEffect(() => {
+    const token = user?.token;
+
+    setUser(JSON.parse(localStorage.getItem("profile")));
+  }, [location]);
+
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
-      <div id="upper">
-        <div className={classes.brandContainer}>
-          <Typography
-            component={Link}
-            to="/"
-            className={classes.heading}
-            variant="h2"
-            align="center"
-          >
-            Fadeories
-          </Typography>
-          <img
-            className={classes.image}
-            src={fadeories}
-            alt="icon"
-            height="60"
-          />
+      <Grid>
+        <div className={classes.upper}>
+          <div className={classes.brandContainer}>
+            <Typography
+              component={Link}
+              to="/"
+              className={classes.heading}
+              variant="h2"
+              align="center"
+            >
+              Fadeories
+            </Typography>
+            <img
+              className={classes.image}
+              src={fadeories}
+              alt="icon"
+              height="60"
+            />
+          </div>
+          <div>
+            <h3 className={classes.lower}>
+              Don't let those memories fade away
+            </h3>
+          </div>
         </div>
-        <div>
-          <h3 className={classes.lower}>Don't let those memories fade away</h3>
-        </div>
-      </div>
+      </Grid>
       <Toolbar className={classes.toolbar}>
         {user ? (
           <div className={classes.profile}>
@@ -49,18 +78,14 @@ export const Navbar = () => {
             <Button
               variant="contained"
               className={classes.logout}
-              color="secondary"
+              color="#bd9d95"
+              onClick={logout}
             >
               Logout
             </Button>
           </div>
         ) : (
-          <Button
-            component={Link}
-            to="/auth"
-            variant="contained"
-            color="primary"
-          >
+          <Button component={Link} to="/auth" variant="contained" className={classes.signin}>
             Sign In
           </Button>
         )}
