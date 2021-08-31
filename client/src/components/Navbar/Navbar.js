@@ -7,11 +7,12 @@ import {
   Typography,
   Grid,
 } from "@material-ui/core";
-import { Link, useHistory,useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 import fadeories from "../../images/fadeories.gif";
 import useStyles from "./styles";
 import { useDispatch } from "react-redux";
+import decode from "jwt-decode";
 
 export const Navbar = () => {
   const classes = useStyles();
@@ -30,6 +31,11 @@ export const Navbar = () => {
 
   useEffect(() => {
     const token = user?.token;
+
+    if (token) {
+      const decodedToken = decode(token);
+      if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+    }
 
     setUser(JSON.parse(localStorage.getItem("profile")));
   }, [location]);
@@ -85,7 +91,12 @@ export const Navbar = () => {
             </Button>
           </div>
         ) : (
-          <Button component={Link} to="/auth" variant="contained" className={classes.signin}>
+          <Button
+            component={Link}
+            to="/auth"
+            variant="contained"
+            className={classes.signin}
+          >
             Sign In
           </Button>
         )}

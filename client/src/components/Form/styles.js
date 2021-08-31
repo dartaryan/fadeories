@@ -49,6 +49,27 @@ export default makeStyles((theme) => ({
     fontFamily: "Heebo"
     
   },
+  note: {
+    color: "#162b29",
+    fontWeight: "bold",
+    fontFamily: "Heebo",
+    backgroundColor: "#f8bd9e",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    textAlign: "center",
+    borderRadius: 15,
+    
+  },
+  notepaper: {
+    backgroundColor: "#f8bd9e",
+    // display: "flex",
+    flexWrap: "wrap",
+    padding: theme.spacing(1),
+    borderRadius: 15,
+    
+
+  },
 
   
 }));

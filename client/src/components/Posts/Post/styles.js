@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles({
   media: {
     height: 0,
-    paddingTop: "56.25%",
+    paddingTop: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     backgroundBlendMode: "darken",
   },
@@ -56,7 +56,11 @@ export default makeStyles({
   buttons: {
     color: "#162b29",
     fontWeight: "bold",
-    fontFamily: "Heebo"
+    fontFamily: "Heebo",
+    display: "flex",
+    fontSize: "small",
+
+
   },
 
   title2: {
