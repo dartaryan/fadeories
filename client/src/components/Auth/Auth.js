@@ -7,6 +7,7 @@ import {
   Grid,
   Typography,
   Container,
+  Grow
 } from "@material-ui/core";
 import { GoogleLogin } from "react-google-login";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -73,7 +74,7 @@ const Auth = () => {
     console.log("Google Sign In  was unsuccessful. Please try again later.");
   };
   return (
-    // <Grow in>
+    <Grow in>
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper} elevation={3}>
         <Avatar className={classes.avatar}>
@@ -163,7 +164,7 @@ const Auth = () => {
         </form>
       </Paper>
     </Container>
-    // </Grow>
+     </Grow>
   );
 };
 

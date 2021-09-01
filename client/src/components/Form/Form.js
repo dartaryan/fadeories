@@ -5,6 +5,7 @@ import {
   Typography,
   Paper,
   jssPreset,
+  Grow,
 } from "@material-ui/core";
 import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
@@ -66,6 +67,7 @@ const Form = ({ currentId, setCurrentId }) => {
     );
   }
   return (
+  
     <Paper className={classes.paper}>
       <form
         autoComplete="off"
@@ -133,6 +135,7 @@ const Form = ({ currentId, setCurrentId }) => {
         </Button>
       </form>
     </Paper>
+
   );
 };
 
