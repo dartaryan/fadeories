@@ -5,7 +5,7 @@ export default makeStyles({
     height: 0,
     paddingTop: "100%",
     backgroundColor: "rgba(0, 0, 0, 0.4)",
-    // backgroundBlendMode: "darken",
+
   },
   border: {
     border: "solid",
