@@ -84,7 +84,6 @@ export const Navbar = () => {
             <Button
               variant="contained"
               className={classes.logout}
-              // color="#bd9d95"
               onClick={logout}
             >
               Logout
