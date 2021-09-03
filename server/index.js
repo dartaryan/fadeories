@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   res.send("Welcome back to fadeories API");
 });
 
-const CONNECTION_URL = "mongodb+srv://dartaryan:096325@cluster0.ewktg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const CONNECTION_URL = "mongodb+srv://dartaryan:305065575@cluster0.ewktg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5000;
 
 mongoose
