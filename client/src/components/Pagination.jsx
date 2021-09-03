@@ -13,7 +13,7 @@ const Paginate = () => {
       count={5}
       page={1}
       variant="outlined"
-      color="#ffe8e2"
+      // color="#ffe8e2"
       borderradius= "15"
       fontFamily= "Heebo"
       font= "Heebo"

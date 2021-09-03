@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     padding: '16px',
     fontFamily: "Heebo",
     font: "Heebo",
-    backgroundColor: "#ffe8e2",
+    // backgroundColor: "#ffe8e2",
   },
   gridContainer: {
     [theme.breakpoints.down('xs')]: {
