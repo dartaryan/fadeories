@@ -67,6 +67,7 @@ export default makeStyles((theme) => ({
     flexWrap: "wrap",
     padding: theme.spacing(1),
     borderRadius: 15,
+    marginBottom: 10,
     
 
   },
