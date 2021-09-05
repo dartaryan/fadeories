@@ -14,7 +14,7 @@ export const getPosts = async (req, res) => {
       .sort({ _id: -1 })
       .limit(LIMIT)
       .skip(startIndex);
-    // const posts = await PostMessage.find().random().limit(LIMIT).skip(startIndex);
+
 
     res
       .status(200)
