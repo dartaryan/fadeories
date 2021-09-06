@@ -1,0 +1,2 @@
+body{background:linear-gradient(-45deg,#000,#182f2e,#2c5252,#111f1e,#162b29,#575151);background-size:400% 400%;-webkit-animation:gradient 10s ease infinite;animation:gradient 10s ease infinite}@-webkit-keyframes gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}@keyframes gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}#upper{display:inline-flex}
+/*# sourceMappingURL=main.310fbd85.chunk.css.map */
