@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 import useStyles from "./styles";
 import { createPost, updatePost } from "../../actions/posts";
@@ -16,7 +17,7 @@ import { createPost, updatePost } from "../../actions/posts";
 //get the current id
 const Form = ({ currentId, setCurrentId }) => {
   const post = useSelector((state) =>
-    currentId ? state.posts.find((p) => p._id === currentId) : null
+    currentId ? state.posts.posts.find((p) => p._id === currentId) : null
   );
   const [postData, setPostData] = useState({
     title: "",
@@ -27,6 +28,7 @@ const Form = ({ currentId, setCurrentId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
+  const history = useHistory();
 
   useEffect(() => {
     if (post) setPostData(post);
@@ -35,9 +37,9 @@ const Form = ({ currentId, setCurrentId }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (currentId) {
+    if (currentId === 0) {
       dispatch(
-        updatePost(currentId, { ...postData, name: user?.result?.name })
+        updatePost(currentId, { ...postData, name: user?.result?.name },history)
       );
     } else {
       dispatch(createPost({ ...postData, name: user?.result?.name }));
@@ -57,17 +59,16 @@ const Form = ({ currentId, setCurrentId }) => {
   if (!user?.result?.name) {
     return (
       <Paper className={classes.notepaper}>
-        <Typography className={classes.note} >
+        <Typography className={classes.note}>
           Hey, those memories are running away.
         </Typography>
-        <Typography className={classes.note} >
-            Sign in and let them stay.
+        <Typography className={classes.note}>
+          Sign in and let them stay.
         </Typography>
       </Paper>
     );
   }
   return (
-  
     <Paper className={classes.paper}>
       <form
         autoComplete="off"
@@ -135,7 +136,6 @@ const Form = ({ currentId, setCurrentId }) => {
         </Button>
       </form>
     </Paper>
-
   );
 };
 

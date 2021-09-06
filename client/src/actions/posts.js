@@ -7,7 +7,7 @@ import {
   LIKE,
   START_LOADING,
   END_LOADING,
-  FETCH_POST
+  FETCH_POST,
 } from "../constants/actionTypes";
 import * as api from "../api/index.js";
 
@@ -25,8 +25,6 @@ export const getPost = (id) => async (dispatch) => {
     console.log(error.message);
   }
 };
-
-
 
 // Action Creators
 export const getPosts = (page) => async (dispatch) => {
@@ -61,10 +59,12 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   }
 };
 
-export const createPost = (post) => async (dispatch) => {
+export const createPost = (post, history) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
     const { data } = await api.createPost(post);
+
+    history.push(`/posts/${data._id}`);
     dispatch({
       type: CREATE,
       payload: data,
