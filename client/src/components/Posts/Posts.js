@@ -1,17 +1,19 @@
 import React from "react";
-import { Grid, LinearProgress  } from "@material-ui/core";
+import { Grid, LinearProgress } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
 import Post from "./Post/Post";
 import useStyles from "./styles";
 
 const Posts = ({ setCurrentId }) => {
-  const {posts} = useSelector((state) => state.posts);
+  const { posts, isLoading } = useSelector((state) => state.posts);
   const classes = useStyles();
 
-  console.log(posts);
-  return !posts?.length ? (
-    <LinearProgress/>
+  if (!posts.length && !isLoading)
+    return (<h3>Everything faded away around here...</h3>)
+
+  return isLoading ? (
+    <LinearProgress />
   ) : (
     <Grid
       className={classes.container}
@@ -21,7 +23,7 @@ const Posts = ({ setCurrentId }) => {
     >
       {posts.map((post) => (
         <Grid key={post._id} item xs={12} sm={12} md={4} lg={4}>
-          <Post post={post} setCurrentId={setCurrentId}/>
+          <Post post={post} setCurrentId={setCurrentId} />
         </Grid>
       ))}
     </Grid>
