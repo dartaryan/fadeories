@@ -1,3 +1,0 @@
-[submodule "server/fadeories"]
-    path = server/fadeories
-    url = https://github.com/dartaryan/fadeories.git

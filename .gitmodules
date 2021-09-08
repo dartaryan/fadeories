@@ -1,6 +1,3 @@
 [submodule "server/fadeories"]
     path = server/fadeories
-    url = https://github.com/dartaryan/fadeories.git
-[submodule "client/fadeories"]
-	path = client/fadeories
-	url = https://github.com/dartaryan/fadeories.git
+    url = git@github.com:dartaryan/fadeories.git
