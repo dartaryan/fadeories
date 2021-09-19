@@ -4,6 +4,7 @@ import {
   UPDATE,
   DELETE,
   LIKE,
+  COMMENT,
   FETCH_BY_SEARCH,
   START_LOADING,
   END_LOADING,
@@ -27,9 +28,21 @@ export default (state = { isLoading: true, posts: [] }, action) => {
 
     case FETCH_BY_SEARCH:
       return { ...state, posts: action.payload };
-      
+
     case FETCH_POST:
       return { ...state, post: action.payload };
+    case COMMENT:
+      return {
+        ...state,
+        posts: state.posts.map((post) => {
+          if (post._id === action.payload._id) {
+            return action.payload;
+          }
+          // return all the other posts normally
+          return post;
+          // change the post that just received a comments
+        }),
+      };
 
     case LIKE:
       return {

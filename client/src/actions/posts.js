@@ -5,6 +5,7 @@ import {
   UPDATE,
   DELETE,
   LIKE,
+  COMMENT,
   START_LOADING,
   END_LOADING,
   FETCH_POST,
@@ -98,19 +99,15 @@ export const deletePost = (id) => async (dispatch) => {
   }
 };
 
-
-
-
-export const commentPost = (value,id) => async (dispatch) => {
+export const commentPost = (value, id) => async (dispatch) => {
   try {
-    await api.comment(value,id)
+    const { data } = await api.commentPost(value, id);
+    dispatch({ type: "COMMENT", payload: data });
+    return data.comments;
   } catch (error) {
-    
+    console.log(error);
   }
-
-}
-
-
+};
 
 export const likePost = (id) => async (dispatch) => {
   const user = JSON.parse(localStorage.getItem("profile"));

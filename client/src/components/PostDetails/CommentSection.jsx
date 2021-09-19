@@ -9,7 +9,7 @@ const CommentSection = ({ post }) => {
   const classes = useStyles();
   const [comments, setComments] = useState([1, 2, 3, 4]);
   const [comment, setComment] = useState("");
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("profile"));
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -30,6 +30,7 @@ const CommentSection = ({ post }) => {
             </Typography>
           ))}
         </div>
+        {user?.result?.name && (
         <div style={{ width: "70%" }}>
           <Typography gutterBottom variant="h6">
             Write a Comment
@@ -54,6 +55,7 @@ const CommentSection = ({ post }) => {
             Comment
           </Button>
         </div>
+        )}
       </div>
     </div>
   );
