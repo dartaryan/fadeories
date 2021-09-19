@@ -63,7 +63,7 @@ export const Navbar = () => {
           </div>
           <div>
             <h3 className={classes.lower}>
-              Don't let those memories fade 
+              Don't let those memories fade away
             </h3>
           </div>
         </div>
