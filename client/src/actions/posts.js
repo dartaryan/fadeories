@@ -98,6 +98,20 @@ export const deletePost = (id) => async (dispatch) => {
   }
 };
 
+
+
+
+export const commentPost = (value,id) => async (dispatch) => {
+  try {
+    await api.comment(value,id)
+  } catch (error) {
+    
+  }
+
+}
+
+
+
 export const likePost = (id) => async (dispatch) => {
   const user = JSON.parse(localStorage.getItem("profile"));
   try {
