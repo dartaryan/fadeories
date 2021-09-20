@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     borderRadius: "20px",
     objectFit: "cover",
     width: "100%",
-    maxHeight: "600px",
+    maxHeight: "400px",
   },
   card: {
     display: "flex",
@@ -22,6 +22,7 @@ export default makeStyles((theme) => ({
   },
   imageSection: {
     marginLeft: "20px",
+    
     [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
     },
@@ -31,6 +32,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
+    
   },
   loadingPaper: {
     display: "flex",

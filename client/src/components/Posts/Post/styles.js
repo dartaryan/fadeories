@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles({
   media: {
     height: 0,
-    paddingTop: "100%",
+    paddingTop: "46.25%",
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     backgroundBlendMode: "darken",
   },
@@ -30,8 +30,8 @@ export default makeStyles({
   },
   overlay2: {
     position: "absolute",
-    top: "10px",
-    right: "10px",
+    top: "20px",
+    right: "20px",
     color: "#ffe8e2",
   },
   grid: {
@@ -40,18 +40,22 @@ export default makeStyles({
   details: {
     display: "flex",
     justifyContent: "space-between",
-    margin: "20px",
-    fontSize: "12px",
+    margin: "10px",
+    fontSize: "0.7rem"
+    
   },
   title: {
     padding: "0 16px",
     color: "#162b29",
-    
   },
   cardActions: {
     padding: "0 16px 8px 16px",
     display: "flex",
     justifyContent: "space-between",
+  },
+  cardAction: {
+    display: "block",
+    textAlign: "initial",
   },
   buttons: {
     color: "#162b29",
@@ -59,21 +63,21 @@ export default makeStyles({
     fontFamily: "Heebo",
     display: "flex",
     fontSize: "small",
-
-
   },
-
   title2: {
     textAlign: "center",
     color: "#162b29",
     fontFamily: "Heebo",
-    fontSize: "12px",
+    fontSize: "medium",
   },
+
   message: {
     textAlign: "center",
     color: "#162b29",
     fontFamily: "Heebo",
-    fontSize: "24px",
+    fontSize: "medium",
     fontWeight: "bold",
   },
+
+
 });

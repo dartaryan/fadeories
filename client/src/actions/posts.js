@@ -102,7 +102,7 @@ export const deletePost = (id) => async (dispatch) => {
 export const commentPost = (value, id) => async (dispatch) => {
   try {
     const { data } = await api.commentPost(value, id);
-    dispatch({ type: "COMMENT", payload: data });
+    dispatch({ type: COMMENT, payload: data });
     return data.comments;
   } catch (error) {
     console.log(error);

@@ -94,7 +94,7 @@ const Post = ({ post, setCurrentId }) => {
         )}
 
         <div>
-          <Typography className={classes.title2}>{post.title}</Typography>
+          
         </div>
         <CardContent>
           <Typography className={classes.message} component="p">
@@ -104,6 +104,7 @@ const Post = ({ post, setCurrentId }) => {
             {post.tags.map((tag) => `#${tag} `)}
           </Typography>
         </CardContent>
+        <Typography className={classes.title2}>{post.title}</Typography>
       </ButtonBase>
       <CardActions className={classes.cardActions}>
         <Button
